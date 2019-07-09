@@ -1,0 +1,31 @@
+.location-field {
+    
+    padding-right:10px!important;
+    padding-bottom: 7px!important;
+    padding-top: 0px!important;
+    margin-top:0px!important;
+    margin-bottom: 5px!important;
+ }
+ 
+ .header-location {
+     margin-bottom:10px!important;
+     margin-top:10px!important;
+     padding-left:0px;
+     padding-bottom:0px!important;
+ }
+
+
+
+ button{
+     margin-bottom: 15px;
+ }
+
+
+
+.eventform {
+    padding-left: 0px!important;
+}
+
+.back-link{
+    padding-left: 0px!important;
+}

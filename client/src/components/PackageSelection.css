@@ -1,0 +1,22 @@
+.package-selection-field {
+    width: 155px;
+    padding-right:10px!important;
+    padding-bottom: 1px!important;
+    padding-top: 1px!important;
+    margin-top:0px!important;
+ }
+ 
+ .event-size-type {
+     height: 50px;
+     width: 145px;
+     margin-right: 9px;
+     background-color: white;
+ }
+
+
+ .header-location {
+    margin-bottom:2px!important;
+    margin-top:5px!important;
+    padding-left:0px;
+    padding-bottom:0px!important;
+}
