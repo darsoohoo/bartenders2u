@@ -30,7 +30,7 @@ class Navbar extends Component {
                         <li><a href="#"><Link to='/company'>Our Company</Link></a></li>
                     </ul>
                     </div>
-   
+                    <div class="collapse navbar-collapse" id="myNavbar">
                     <ul className="nav navbar-nav navbar-right">
                         <li><a href="#"><Link to='/'>Home</Link></a></li>
                         <li><a href="#">Login</a></li>
@@ -44,6 +44,7 @@ class Navbar extends Component {
                         </ul>
                         </li>
                     </ul>
+                    </div>
                  
                 </div>
                 </nav>
