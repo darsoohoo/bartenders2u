@@ -73,6 +73,7 @@ class QuoteReview extends Component {
 
 
         addQuote(values);
+        this.continue(event)
         console.log("quote submitted")
      
     };

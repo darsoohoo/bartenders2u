@@ -33,8 +33,8 @@ class Navbar extends Component {
                     <div class="collapse navbar-collapse" id="myNavbar">
                     <ul className="nav navbar-nav navbar-right">
                         <li><a href="#"><Link to='/'>Home</Link></a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Signup</a></li>
+                        <li><a href="#"><Link to='/login'>Login</Link></a></li>
+                        <li><a href="#"><Link to='/register'>Signup</Link></a></li>
                         <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile
                         <span class="caret"></span></a>
