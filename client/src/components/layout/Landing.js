@@ -124,7 +124,7 @@ export class Landing extends Component {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'}}>
                 <div class="container">
-                <h2>We bring the party to you</h2>
+                <h4>We bring the party to you</h4>
 
                     <div id="frontpage-jumbotron" class="jumbotron">    
                          
@@ -153,10 +153,10 @@ export class Landing extends Component {
                         backgroundRepeat: 'no-repeat'}}>
 
 
-                            <div id="packages-container" >
-                            <h2>We bring the party to you</h2>
+                            <div id="quote-container" >
+                            <h4>We bring the party to you</h4>
                             
-                                <div id="services-jumbotron" class="jumbotron">    
+                                <div id="quote-jumbotron" class="jumbotron">    
                                     <QuoteReview
                                         nextStep={this.nextStep}
                                         prevStep={this.prevStep}

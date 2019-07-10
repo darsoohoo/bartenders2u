@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Packages.css';
 import LevelsList from './LevelsList';
 import Loader from './Loader'
+import './Packages.css'
 
 
 
@@ -39,14 +39,12 @@ class Packages extends Component {
 
 
                 <div id="packages-container" >
-                <h2>We bring the party to you</h2>
+                <h2>We bring the drinks to you</h2>
 
                 <div id="services-jumbotron" class="jumbotron">    
 
                 <Loader />
-              
-                  
-                  
+                                
                     </div>
                 </div>
                    
@@ -66,7 +64,7 @@ class Packages extends Component {
 
 
                 <div id="packages-container" >
-                <h2>We bring the party to you</h2>
+                <h2>We bring the drinks to you</h2>
 
                 <div id="services-jumbotron" class="jumbotron">    
 

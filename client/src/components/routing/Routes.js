@@ -15,12 +15,12 @@ import Post from '../post/Post';
 import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
 import Packages from '../../components/Packages';
-import Company from '../../components/Company';
+import Company from '../Company';
 import Success from '../../components/Success';
 
 const Routes = () => {
   return (
-    <section className='container'>
+    <section className=''>
       <Alert />
       <Switch>
         <Route exact path="/packages" component={Packages} />

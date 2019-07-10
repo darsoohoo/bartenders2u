@@ -1,26 +1,24 @@
 #packages-container {
     margin-top: 0%;
-      padding-left: 300px;
-      padding-right: 300px;
+      padding-left: 10%;
+      padding-right:10%;
       padding-top: 75px;
       padding-bottom: 25%;
-      height: auto;
-      width: auto;
+      min-width: 300px;
+     
   }
   
-    
+  
   #services-jumbotron {
     border-radius: 0px;
     -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
     box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-    
     margin-top: 1px;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 30px;
-    padding-bottom: 30px;
-  
+    padding-bottom: 20px;
     background-color: white;   
-    width:auto;
-    height: auto;
+    width: auto;
+  
   }
