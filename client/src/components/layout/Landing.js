@@ -53,6 +53,13 @@ export class Landing extends Component {
   };
 
 
+  submitHandler = (event) => {
+      event.preventDefault()
+      const data = this.state
+      console.log("Final data is " + data)
+  }
+
+
 
 
 

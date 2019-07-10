@@ -35,7 +35,6 @@ class QuoteReview extends Component {
 
     submitHandler = event => {
         event.preventDefault();
-        console.log("you reached submithandler")
         const { values: { date, startTime, endTime, address, venueName, selectedPackage, packagePrice, eventSize, eventType, firstName, lastName, email, phoneNumber }, handleChange} = this.props;
         const values = { date, startTime, endTime, address, venueName, selectedPackage, packagePrice, eventSize, eventType, firstName, lastName, email, phoneNumber }
         
@@ -55,9 +54,7 @@ class QuoteReview extends Component {
                 email: data.email,
                 phoneNumber: data.phoneNumber
             }
-   
-           console.log("you reached add Quote")
-           console.log(newQuote)
+
 
            try {
             const config = {
@@ -66,7 +63,7 @@ class QuoteReview extends Component {
                 }
             };
             const body = JSON.stringify(newQuote);
-            const res = await axios.post('/submit-request', body, config);
+            const res = await axios.post('/api/quotes/submit-request', body, config);
             console.log(res.data)
            } catch(err) {
             console.log(err.response.data)
@@ -76,7 +73,7 @@ class QuoteReview extends Component {
 
 
         addQuote(values);
-        console.log("you reach after addQuote()")
+        console.log("quote submitted")
      
     };
     
@@ -86,7 +83,7 @@ class QuoteReview extends Component {
     render() {
 
   //method="POST" action="/submit-request" 
-        const { values: { date, startTime, endTime, address, venueName, selectedPackage, packagePrice, eventSize, eventType, firstName, lastName, email, phoneNumber }, handleChange} = this.props;
+        const { values: { date, startTime, endTime, address, venueName, selectedPackage, packagePrice, eventSize, eventType, firstName, lastName, email, phoneNumber }, handleChange, submitHandler} = this.props;
   
        
 
