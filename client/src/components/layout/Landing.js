@@ -8,6 +8,7 @@ import Success from '../Success'
 
 
 
+
 export class Landing extends Component {
     state = {
         levels: [],
@@ -90,6 +91,7 @@ export class Landing extends Component {
                                         handleChange={this.handleChange}
                                         values={values}
                                     />
+
                         </div>
                     </div>
                 </main>

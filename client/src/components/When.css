@@ -1,9 +1,15 @@
 .time {
-    width: 155px;
-    padding-right:10px!important;
-    padding-bottom: 10px!important;
+    width: 135px;
+    padding-right:0px;
+    padding-left: 2px;
+    padding-bottom: 10px;
     padding-top: 5px!important;
     margin-top:7px!important;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 1%
  }
  
  .header-time {

@@ -25,6 +25,9 @@ class Where extends Component {
                     <div class="row">
                         <Link class="back-link" onClick={this.back}>Back</Link> 
                     </div>
+                    <div class="progress" style="height:20px">
+                        <div class="progress-bar" style="width:40%;height:20px"></div>
+                    </div>
                     
                     <form class="ui form">
                         <div>
@@ -34,18 +37,17 @@ class Where extends Component {
                                     <h5>Any place you want...</h5>
                                     <hr></hr>
                                     <h6 class="header-location">Where</h6>
-
                                     </div>
 
                                     <div class="row">
                                         <TextField
                                             onChange={handleChange('address')}
                                             value={values.address}
-                                            placeholder="1489 Webster Street"
+                                            placeholder="Street Address"
                                             id="outlined-name"
                                             margin="normal"
                                             variant="outlined"
-                                            label="Address"
+                                            label="Street Address"
                                             className="col-sm-12 location-field"
                                             id="address"
                                             >
@@ -76,6 +78,7 @@ class Where extends Component {
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </form>
                 </div>
