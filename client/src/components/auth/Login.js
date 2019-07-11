@@ -12,7 +12,8 @@ import './Login.css'
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
-    password: ''
+    password: '',
+    isLoggedIn: '',
   });
 
   const { email, password } = formData;
@@ -24,6 +25,13 @@ const Login = ({ login, isAuthenticated }) => {
     e.preventDefault();
     login(email, password);
   };
+
+  const onClick = ({ login, isAuthenticated }) => {
+    const [formData, setForcmData] = useState({
+      email: '',
+      password: '',
+      isLoggedIn: '',
+    });
 
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />;
@@ -64,6 +72,10 @@ const Login = ({ login, isAuthenticated }) => {
                             className="col-sm-6 login-selection-field"
                         />
                         </div>
+                      
+                        <Link onClick={} to="/auth/google" type="submit">Login with google</Link>
+                  
+                        
                       
                
                      

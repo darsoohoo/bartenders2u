@@ -30,6 +30,7 @@ app.use(passport.session());
 
 // Define Routes
 require('./routes/authRoutes')(app)
+app.use('/auth/google', require('./routes/authRoutes'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
