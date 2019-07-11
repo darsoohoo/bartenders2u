@@ -10,8 +10,7 @@ require('./models/User')
 require('./services/passport')
 
 // Connect Database
-mongoose.Promise = global.Promise;
-mongoose.connect(keys.mongoURI);
+connectDB()
 
 const app = express();
 
