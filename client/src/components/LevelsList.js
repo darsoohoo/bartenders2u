@@ -1,12 +1,27 @@
     
-import React from "react";
+import React, {useState} from "react";
 import { Link } from 'react-router-dom';
 import './LevelsList.css';
 
 
 
 
+const handleClick = input => e => {
+    this.setState({ [input]: e.target.value });
+    browsePackageSelect()
+    
+}
+
+// Proceed to next step
+const browsePackageSelect = () => {
+    const { step } = useState;
+    this.setState({
+        step: step - 2
+    });
+}
+
 const LevelsList = props => {
+    const {step, selectedPackage } = props;
     console.log(props.levels)
     return (
         <div className="levels-list">
@@ -22,9 +37,9 @@ const LevelsList = props => {
                         ))}
                     </div>
 
-                    <Link type="submit" id="when-next" to="/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    <input onClick={handleClick} value={propsc} type="submit" id="when-next" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                             Select
-                    </Link> 
+                    </input> 
 
                 </div> 
                 

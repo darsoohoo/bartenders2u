@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import When from '../When'
 import Where from '../Where'
+import Packages from '../Packages'
 import PackageSelection from '../PackageSelection'
 import QuoteReview from '../QuoteReview'
 import './Landing.css'
@@ -35,6 +36,22 @@ export class Landing extends Component {
         });
     }
 
+    // Proceed to next step
+    browsePackageStep = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step + 2
+        });
+    }
+
+            // Proceed to next step
+    browsePackageSelect = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step - 2
+        });
+    }
+
     // Go back to prev step
     prevStep = () => {
         const { step } = this.state;
@@ -49,6 +66,11 @@ export class Landing extends Component {
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
   };
+
+    // Handle fields change
+    handleClick = input => e => {
+        this.setState({ [input]: e.target.value });
+      };
 
 
   submitHandler = (event) => {
@@ -138,8 +160,18 @@ export class Landing extends Component {
             </main>
          </Fragment>
         );
-      case 4:
-           
+        case 4:
+            return (
+                <Fragment>
+                    <Packages 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        values={values}/>
+                </Fragment>
+            );
+      case 5: 
+      
         return (
             
             <Fragment>
@@ -164,7 +196,7 @@ export class Landing extends Component {
             </Fragment>
            
         );
-        case 5:
+        case 6:
             return (
                 <Fragment>
                 <main className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer

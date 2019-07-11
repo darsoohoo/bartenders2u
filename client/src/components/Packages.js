@@ -7,6 +7,7 @@ import './Packages.css'
 
 
 class Packages extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -68,7 +69,7 @@ class Packages extends Component {
 
                 <div id="services-jumbotron" class="jumbotron">    
 
-                <LevelsList levels={this.state.levels}/>
+                <LevelsList onClick={this.continue} levels={this.state.levels}/>
               
                   
                   
