@@ -23,34 +23,36 @@ const Dashboard = ({
     <Loader />
   ) : (
     <Fragment>
+      <main>
         <div id="dashboard-container">
-        <div id="dashboard-jumbotron" class="jumbotron">   
-            <h1 className='large text-primary'>Dashboard</h1>
-            <p className='lead'>
-              <i className='fas fa-user' /> Welcome {user && user.name}
-            </p>
-            {profile !== null ? (
-              <Fragment>
-                <DashboardActions />
-                <Experience experience={profile.experience} />
-                <Education education={profile.education} />
+          <div id="dashboard-jumbotron" class="jumbotron">   
+              <h1 className='large text-primary'>Dashboard</h1>
+              <p className='lead'>
+                <i className='fas fa-user' /> Welcome {user && user.name}
+              </p>
+              {profile !== null ? (
+                <Fragment>
+                  <DashboardActions />
+                  <Experience experience={profile.experience} />
+                  <Education education={profile.education} />
 
-                <div className='my-2'>
-                  <button className='btn btn-danger' onClick={() => deleteAccount()}>
-                    <i className='fas fa-user-minus' /> Delete My Account
-                  </button>
-                </div>
-              </Fragment>
-            ) : (
-              <Fragment>
-                <p>You have not yet setup a profile, please add some info</p>
-                <Link to='/create-profile' className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1'>
-                  Create Profile
-                </Link>
-              </Fragment>
-            )}
+                  <div className='my-2'>
+                    <button className='btn btn-danger' onClick={() => deleteAccount()}>
+                      <i className='fas fa-user-minus' /> Delete My Account
+                    </button>
+                  </div>
+                </Fragment>
+              ) : (
+                <Fragment>
+                  <p>You have not yet setup a profile, please add some info</p>
+                  <Link to='/create-profile' className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1'>
+                    Create Profile
+                  </Link>
+                </Fragment>
+              )}
+          </div>
         </div>
-        </div>
+      </main>
     </Fragment>
   );
 };
