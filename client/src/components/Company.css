@@ -1,0 +1,27 @@
+#company-container {
+    margin-top: 100px;
+      padding-left: 100px;
+      padding-right:100px;
+      padding-top: 75px;
+      padding-bottom: 25%;
+      display:flex;
+      justify-content: center;
+  
+     
+  }
+  
+  
+  #company-jumbotron {
+    border-radius: 0px;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    margin-top: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;   
+    width: 900px;
+   
+  
+  }

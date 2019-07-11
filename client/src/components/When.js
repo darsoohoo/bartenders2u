@@ -67,32 +67,62 @@ export class When extends Component {
                                     </div>
 
                                     <div class="row">
-                                        <form  noValidate>
-                                            <TextField
-                                            id="time"
-                                            name="starttime"
-                                            type="time"
-                                            onChange={handleChange('startTime')}
-                                            id="outlined-name"
-                                            margin="normal"
-                                            variant="outlined"
-                                            defaultValue={values.startTime}
-                                            className="col-sm-6 time"
-                                            />
-                                        </form>
-                                        <form noValidate>
-                                        <TextField
-                                            id="time"
-                                            name="endtime"
-                                            type="time"
-                                            onChange={handleChange('endTime')}
-                                            id="outlined-name"
-                                            margin="normal"
-                                            variant="outlined"
-                                            defaultValue={values.endTime}
-                                            className="col-sm-6 time"
-                                        />
-                                        </form>
+                                    <form  noValidate>
+                                        <select type="time" defaultValue={values.startTime} onChange={handleChange('startTime')} className="time col-sm-6">
+                                            <option value="12:00 AM">12:00 AM</option>
+                                            <option value="1:00 AM">1:00 AM</option>
+                                            <option value="2:00 AM">2:00 AM</option>
+                                            <option value="3:00 AM">3:00 AM</option>
+                                            <option value="4:00 AM">4:00 AM</option>
+                                            <option value="5:00 AM">5:00 AM</option>
+                                            <option value="6:00 AM">6:00 AM</option>
+                                            <option value="7:00 AM">7:00 AM</option>
+                                            <option value="8:00 AM">8:00 AM</option>
+                                            <option value="9:00 AM">9:00 AM</option>
+                                            <option value="10:00 AM">10:00 AM</option>
+                                            <option value="11:00 AM">11:00 AM</option>
+                                            <option value="12:00 PM">12:00 PM</option>
+                                            <option value="1:00 PM">1:00 PM</option>
+                                            <option value="2:00 PM">2:00 PM</option>
+                                            <option value="3:00 PM">3:00 PM</option>
+                                            <option value="4:00 PM">4:00 PM</option>
+                                            <option value="5:00 PM">5:00 PM</option>
+                                            <option value="6:00 PM">6:00 PM</option>
+                                            <option value="7:00 PM">7:00 PM</option>
+                                            <option value="8:00 PM">8:00 PM</option>
+                                            <option value="9:00 PM">9:00 PM</option>
+                                            <option value="10:00 PM">10:00 PM</option>
+                                            <option value="11:00 PM">11:00 PM</option>
+                                        </select>
+                                    </form>
+                                    <form noValidate>
+                                        <select type="time" defaultValue={values.endTime} onChange={handleChange('endTime')} className="time col-sm-6">
+                                            <option value="12:00 AM">12:00 AM</option>
+                                            <option value="1:00 AM">1:00 AM</option>
+                                            <option value="2:00 AM">2:00 AM</option>
+                                            <option value="3:00 AM">3:00 AM</option>
+                                            <option value="4:00 AM">4:00 AM</option>
+                                            <option value="5:00 AM">5:00 AM</option>
+                                            <option value="6:00 AM">6:00 AM</option>
+                                            <option value="7:00 AM">7:00 AM</option>
+                                            <option value="8:00 AM">8:00 AM</option>
+                                            <option value="9:00 AM">9:00 AM</option>
+                                            <option value="10:00 AM">10:00 AM</option>
+                                            <option value="11:00 AM">11:00 AM</option>
+                                            <option value="12:00 PM">12:00 PM</option>
+                                            <option value="1:00 PM">1:00 PM</option>
+                                            <option value="2:00 PM">2:00 PM</option>
+                                            <option value="3:00 PM">3:00 PM</option>
+                                            <option value="4:00 PM">4:00 PM</option>
+                                            <option value="5:00 PM">5:00 PM</option>
+                                            <option value="6:00 PM">6:00 PM</option>
+                                            <option value="7:00 PM">7:00 PM</option>
+                                            <option value="8:00 PM">8:00 PM</option>
+                                            <option value="9:00 PM">9:00 PM</option>
+                                            <option value="9:00 PM">10:00 PM</option>
+                                            <option value="9:00 PM">11:00 PM</option>
+                                        </select>
+                                    </form>
                                         <button
                                             onClick={this.continue}
                                             id="when-next" 

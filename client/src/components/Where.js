@@ -22,7 +22,6 @@ class Where extends Component {
         const progressBarStyle = {
             width: '25%',
             height: '15px',
-
             
         }
         const mdProgress = {

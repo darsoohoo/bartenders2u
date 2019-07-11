@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Company.css'
 
 class Company extends Component {
     constructor(props) {
@@ -26,11 +27,11 @@ class Company extends Component {
                 backgroundRepeat: 'no-repeat'}}>
 
 
-                <div id="packages-container" >
+                <div id="company-container" >
 
 
 
-                <div id="services-jumbotron" class="jumbotron">    
+                <div id="company-jumbotron" class="jumbotron">    
 
                 <h2>Mission Statement</h2>
                     <p>Mission Statement

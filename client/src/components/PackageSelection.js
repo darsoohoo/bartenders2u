@@ -82,7 +82,7 @@ class PackageSelection extends Component {
                             <label class="row header-location">Event Info</label>
                                 <div class="row">
                                 
-                                    <select defaultValue={values.eventSize} onChange={handleChange('eventSize')} className="event-size-type col-sm-6">
+                                    <select value={values.eventSize} onChange={handleChange('eventSize')} className="event-size-type col-sm-6">
                                         <option value="">Size</option>
                                         <option value="1-50">1-50</option>
                                         <option value="51-100">50-100</option>
@@ -200,7 +200,7 @@ class PackageSelection extends Component {
                             <label class="row header-location">Event Info</label>
                                 <div class="row">
                                 
-                                    <select defaultValue={values.eventSize} onChange={handleChange('eventSize')} className="event-size-type col-sm-6">
+                                    <select value={values.eventSize} onChange={handleChange('eventSize')} className="event-size-type col-sm-6">
                                         <option value="">Size</option>
                                         <option value="1-50">1-50</option>
                                         <option value="51-100">50-100</option>
@@ -210,7 +210,7 @@ class PackageSelection extends Component {
                                     </select>
                              
  
-                                    <select defaultValue={values.eventType}  onChange={handleChange('eventType')} className="event-size-type col-sm-6">
+                                    <select alue={values.eventType}  onChange={handleChange('eventType')} className="event-size-type col-sm-6">
                                         <option value="">Type</option>
                                         <option value="Wedding">Wedding</option>
                                         <option value="Business">Business</option>
