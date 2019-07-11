@@ -1,0 +1,43 @@
+#login-container {
+  margin-top: 0%;
+    padding-left: 10%;
+    padding-right:10%;
+    padding-top: 75px;
+    padding-bottom: 25%;
+    min-width: 300px;
+   
+}
+
+
+#login-jumbotron {
+  border-radius: 0px;
+  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  margin-top: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;   
+  max-width: 500px;
+
+
+}
+
+.my-1{
+    margin-top: 10px;
+
+}
+.no-account{
+    margin-top: 20px;
+}
+
+
+
+
+.login-selection-field {
+  width: 165px;
+  height: 50px;
+  margin-right: 10px!important;
+  margin-bottom: 15px!important;
+}

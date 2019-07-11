@@ -99,11 +99,13 @@ export class When extends Component {
                                             className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                                             Next
                                         </button> 
+    
                                     </div>
                                 </div>
                             </div>
                        </div>
                     </form>
+
                 </section>
         );
     }
