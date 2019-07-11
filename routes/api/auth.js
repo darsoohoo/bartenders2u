@@ -3,6 +3,8 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const auth = require('../../middleware/auth');
 const jwt = require('jsonwebtoken');
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const config = require('config');
 const { check, validationResult } = require('express-validator/check');
 
@@ -76,5 +78,6 @@ router.post(
     }
   }
 );
+
 
 module.exports = router;
