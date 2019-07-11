@@ -82,14 +82,12 @@ export class Landing extends Component {
                 backgroundRepeat: 'no-repeat'}}>
                     <div class="container">
                     <h4>We bring the party to you</h4>
-
                         <div id="frontpage-jumbotron" class="jumbotron">    
-                            
-                                    <When
-                                        nextStep={this.nextStep}
-                                        handleChange={this.handleChange}
-                                        values={values}
-                                    />
+                            <When
+                                nextStep={this.nextStep}
+                                handleChange={this.handleChange}
+                                values={values}
+                            />
                         </div>
                     </div>
                 </main>
@@ -106,16 +104,13 @@ export class Landing extends Component {
                     backgroundRepeat: 'no-repeat'}}>
                         <div class="container">
                         <h4>We bring the party to you</h4>
-
-                            <div id="frontpage-jumbotron" class="jumbotron">    
-                                    
-                                        <Where
-                                            nextStep={this.nextStep}
-                                            prevStep={this.prevStep}
-                                            handleChange={this.handleChange}
-                                            values={values}
-                                        />
-                            
+                            <div id="frontpage-jumbotron" class="jumbotron">           
+                                <Where
+                                    nextStep={this.nextStep}
+                                    prevStep={this.prevStep}
+                                    handleChange={this.handleChange}
+                                    values={values}
+                                />
                             </div>
                         </div>
                     </main>
@@ -124,24 +119,21 @@ export class Landing extends Component {
       case 3:
         return (
          <Fragment>
-                <main className="site content mdl-layout mdl-js-layout mdl-layout--fixed-drawer
-            mdl-layout--fixed-header"
-            style={{  backgroundImage: "url(" + imgUrlCity + ")",
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'}}>
+            <main className="site content mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+                mdl-layout--fixed-header"
+                style={{  backgroundImage: "url(" + imgUrlCity + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'}}>
                 <div class="container">
                 <h4>We bring the party to you</h4>
-
                     <div id="frontpage-jumbotron" class="jumbotron">    
-                         
-                                <PackageSelection
-                                    nextStep={this.nextStep}
-                                    prevStep={this.prevStep}
-                                    handleChange={this.handleChange}
-                                    values={values}
-                                />
-                        
+                        <PackageSelection
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                        />
                     </div>
                 </div>
             </main>
@@ -152,29 +144,24 @@ export class Landing extends Component {
         return (
             
             <Fragment>
-                    <main className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
-                        mdl-layout--fixed-header"
-                        style={{  backgroundImage: "url(" + imgUrlRooftop + ")",
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat'}}>
-
-
-                            <div id="quote-container" >
-                       
-                            
-                                <div id="quote-jumbotron" class="jumbotron">    
-                                    <QuoteReview
-                                        nextStep={this.nextStep}
-                                        prevStep={this.prevStep}
-                                        handleChange={this.handleChange}
-                                        submitHandler={this.submitHandler}
-                                        values={values}
-                                        />
-                                </div>
-                            </div>
-                            
-                        </main>
+                <main className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+                    mdl-layout--fixed-header"
+                    style={{  backgroundImage: "url(" + imgUrlRooftop + ")",
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat'}}>
+                    <div id="quote-container" >
+                        <div id="quote-jumbotron" class="jumbotron">    
+                            <QuoteReview
+                                nextStep={this.nextStep}
+                                prevStep={this.prevStep}
+                                handleChange={this.handleChange}
+                                submitHandler={this.submitHandler}
+                                values={values}
+                                />
+                        </div>
+                    </div>
+                </main>
             </Fragment>
            
         );
