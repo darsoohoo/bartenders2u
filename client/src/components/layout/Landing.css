@@ -17,10 +17,12 @@
 }
 
 
+
+
 #services-jumbotron {
   border-radius: 0px;
-  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 3px 2px 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 3px 2px 2px 3px rgba(0,0,0,0.1);
   
   margin-top: 1px;
   padding-left: 20px;
@@ -39,6 +41,8 @@
     padding-top: 75px;
     padding-bottom: 25%;
     min-width: 300px;
+    display:flex;
+    justify-content: center;
    
 }
 

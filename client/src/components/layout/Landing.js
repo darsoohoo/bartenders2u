@@ -161,7 +161,7 @@ export class Landing extends Component {
 
 
                             <div id="quote-container" >
-                            <h4>We bring the party to you</h4>
+                       
                             
                                 <div id="quote-jumbotron" class="jumbotron">    
                                     <QuoteReview

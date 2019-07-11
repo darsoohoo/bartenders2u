@@ -50,6 +50,14 @@ class PackageSelection extends Component {
     render() {
         const { values, handleChange } = this.props;
         const { isLoaded, levels } = this.state;
+        const progressBarStyle = {
+            width: '55%',
+            height: '20px',
+        }
+        const mdProgress = {
+            height: '10px',
+            marginTop: '15px'
+        }
     
 
         if(!isLoaded) {
@@ -59,6 +67,10 @@ class PackageSelection extends Component {
                     <div class="row">
                     <Link onClick={this.back}>Back</Link> 
                     </div>
+                    <div class="progress md-progress row" style={mdProgress}>
+                            <div class="progress-bar" role="progressbar" style={progressBarStyle} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
                 
                  <div class="row">
                     <h5>Any package you want</h5>
@@ -70,7 +82,7 @@ class PackageSelection extends Component {
                             <label class="row header-location">Event Info</label>
                                 <div class="row">
                                 
-                                    <select defaultValue={values.eventSize} onChange={handleChange('eventSize')} className="event-size-type col-sm-6">
+                                    <select value={values.eventSize} onChange={handleChange('eventSize')} className="event-size-type col-sm-6">
                                         <option value="">Size</option>
                                         <option value="1-50">1-50</option>
                                         <option value="51-100">50-100</option>
@@ -170,6 +182,9 @@ class PackageSelection extends Component {
                     <div class="row">
                     <Link onClick={this.back}>Back</Link> 
                     </div>
+                    <div class="progress md-progress row" style={mdProgress}>
+                            <div class="progress-bar" role="progressbar" style={progressBarStyle} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                 
                  <div class="row">
                     <h5>Any package you want</h5>
@@ -185,7 +200,7 @@ class PackageSelection extends Component {
                             <label class="row header-location">Event Info</label>
                                 <div class="row">
                                 
-                                    <select defaultValue={values.eventSize} onChange={handleChange('eventSize')} className="event-size-type col-sm-6">
+                                    <select value={values.eventSize} onChange={handleChange('eventSize')} className="event-size-type col-sm-6">
                                         <option value="">Size</option>
                                         <option value="1-50">1-50</option>
                                         <option value="51-100">50-100</option>
@@ -195,7 +210,7 @@ class PackageSelection extends Component {
                                     </select>
                              
  
-                                    <select defaultValue={values.eventType}  onChange={handleChange('eventType')} className="event-size-type col-sm-6">
+                                    <select alue={values.eventType}  onChange={handleChange('eventType')} className="event-size-type col-sm-6">
                                         <option value="">Type</option>
                                         <option value="Wedding">Wedding</option>
                                         <option value="Business">Business</option>

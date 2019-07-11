@@ -17,30 +17,29 @@ class Navbar extends Component {
 
     render() {
         return (
-                <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="navbar-header">
+                <nav className="navbar navbar-default navbar-fixed-top">
+                <div className="container-fluid">
+                    <div className="navbar-header">
 
-                    <a class="navbar-brand" href="#">B2U</a>
+                    <Link className="navbar-brand" to='/'>B2U</Link>
                     </div>
                     <div>
-                    <ul class="nav navbar-nav navbar-left">
+                    <ul className="nav navbar-nav navbar-left">
                     
-                        <li><a href="#"><Link to='/packages'>Our Services</Link></a></li>
-                        <li><a href="#"><Link to='/company'>Our Company</Link></a></li>
+                        <li><Link to='/packages'>Our Services</Link></li>
+                        <li><Link to='/company'>Our Company</Link></li>
                     </ul>
                     </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
+                    <div className="collapse navbar-collapse" id="myNavbar">
                     <ul className="nav navbar-nav navbar-right">
-                        <li><a href="#"><Link to='/'>Home</Link></a></li>
-                        <li><a href="#"><Link to='/login'>Login</Link></a></li>
-                        <li><a href="#"><Link to='/register'>Signup</Link></a></li>
-                        <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Account</a></li>
-                            <li><a href="#">Signout</a></li>
+                        <li><Link to='/login'>Login</Link></li>
+                        <li><Link to='/register'>Signup</Link></li>
+                        <li className="dropdown">
+                        <a className="dropdown-toggle" data-toggle="dropdown" href="#">Profile
+                        <span className="caret"></span></a>
+                        <ul className="dropdown-menu">
+                            <li><Link href="#">Account</Link></li>
+                            <li><Link href="#">Signout</Link></li>
                         </ul>
                         </li>
                     </ul>

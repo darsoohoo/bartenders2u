@@ -19,15 +19,29 @@ class Where extends Component {
 
     render() {
         const { values, handleChange } = this.props;
+        const progressBarStyle = {
+            width: '25%',
+            height: '15px',
+            
+        }
+        const mdProgress = {
+            height: '10px',
+            marginTop: '11px'
+        }
 
         return (
                 <div class="eventform">
                     <div class="row">
-                        <Link class="back-link" onClick={this.back}>Back</Link> 
+                        <Link className="back-link" onClick={this.back}>Back</Link> 
                     </div>
+
                     
                     <form class="ui form">
+
                         <div>
+                        <div class="progress md-progress row" style={mdProgress}>
+                            <div class="progress-bar" role="progressbar" style={progressBarStyle} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <div class="row">
