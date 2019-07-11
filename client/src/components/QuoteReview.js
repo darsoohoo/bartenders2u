@@ -85,7 +85,14 @@ class QuoteReview extends Component {
 
   //method="POST" action="/submit-request" 
         const { values: { date, startTime, endTime, address, venueName, selectedPackage, packagePrice, eventSize, eventType, firstName, lastName, email, phoneNumber }, handleChange, submitHandler} = this.props;
-  
+        const progressBarStyle = {
+            width: '95%',
+            height: '20px',
+        }
+        const mdProgress = {
+            height: '10px',
+            marginTop: '15px'
+        }
        
 
             return (
@@ -94,6 +101,9 @@ class QuoteReview extends Component {
                     <form className="ui form"  onSubmit={this.submitHandler} >
                             <div className="row">
                                <Link onClick={this.back}>Back</Link>   
+                               <div class="progress md-progress" style={mdProgress}>
+                                    <div class="progress-bar" role="progressbar" style={progressBarStyle} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
                                 <h4>Review</h4>
                                 <hr></hr>
                             </div>

@@ -50,6 +50,14 @@ class PackageSelection extends Component {
     render() {
         const { values, handleChange } = this.props;
         const { isLoaded, levels } = this.state;
+        const progressBarStyle = {
+            width: '55%',
+            height: '20px',
+        }
+        const mdProgress = {
+            height: '10px',
+            marginTop: '15px'
+        }
     
 
         if(!isLoaded) {
@@ -59,6 +67,10 @@ class PackageSelection extends Component {
                     <div class="row">
                     <Link onClick={this.back}>Back</Link> 
                     </div>
+                    <div class="progress md-progress row" style={mdProgress}>
+                            <div class="progress-bar" role="progressbar" style={progressBarStyle} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
                 
                  <div class="row">
                     <h5>Any package you want</h5>
@@ -169,6 +181,9 @@ class PackageSelection extends Component {
                 <form class="ui form" >
                     <div class="row">
                     <Link onClick={this.back}>Back</Link> 
+                    </div>
+                    <div class="progress md-progress row" style={mdProgress}>
+                            <div class="progress-bar" role="progressbar" style={progressBarStyle} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 
                  <div class="row">
