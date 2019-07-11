@@ -1,9 +1,14 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const path = require('path');
+const passport = require('passport')
+const GoogleStrategy = require('passport-google-oauth20').Strategy
 
 const app = express();
 
+passport.use(new GoogleStrategy());
+// client id: 305575279171-qd1s3vloa5sadn5c2krejjprua6mqgcq.apps.googleusercontent.com
+// client secret: mUEPLODYcvDiOUygC0k1TtC3
 // Connect Database
 connectDB();
 

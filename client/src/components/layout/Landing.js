@@ -27,14 +27,7 @@ export class Landing extends Component {
     }
 
     
-    componentDidMount() {
-        fetch('/api/levels/data')
-        .then(res => res.json())
-        .then(levels => this.setState({levels: levels, isLoaded: true}, () => console.log('Levels fetched...', levels)))
-        .catch(e => {
-            console.log(`An error occured: ${e}`)
-        });
-    }
+
 
 
     // Proceed to next step
