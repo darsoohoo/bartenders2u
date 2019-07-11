@@ -8,6 +8,7 @@ import Experience from './Experience';
 import Education from './Education';
 import Loader from '../Loader';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
+import './Dashboard.css';
 
 const Dashboard = ({
   getCurrentProfile,

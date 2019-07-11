@@ -16,7 +16,7 @@ import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
 import Packages from '../../components/Packages';
 import Company from '../Company';
-import Success from '../../components/Success';
+
 
 const Routes = () => {
   return (
@@ -25,7 +25,6 @@ const Routes = () => {
       <Switch>
         <Route exact path="/packages" component={Packages} />
         <Route exact path="/company" component={Company} />
-        <Route exact path="/success" component={Success} />
         <Route exact path='/register' component={Register} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/profiles' component={Profiles} />

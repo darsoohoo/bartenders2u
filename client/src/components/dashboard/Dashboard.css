@@ -3,7 +3,6 @@
     padding-left: 10%;
     padding-right:10%;
     padding-top: 75px;
-    padding-bottom: 25%;
     min-width: 300px;
     display:flex;
     justify-content: center;
@@ -19,16 +18,13 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   background-color: white;   
   width: 500px;
-
-
 }
 
 .my-1{
     margin-top: 10px;
-
 }
 .no-account{
     margin-top: 20px;
