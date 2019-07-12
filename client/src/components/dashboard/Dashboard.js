@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
@@ -51,11 +51,11 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
         const body = JSON.stringify(updatedAccount);
         const res = await axios.post(`/api/users/update/${user && user._id}`, body, config);
         console.log(res.data)
-
+        console.log("account updated")
      
        } catch(err) {
         console.log(err.response.data)
-
+        console.log("account not updated")
        }
 
     }
@@ -68,25 +68,21 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
 
 
   return  (
-  
     <Fragment>
-   
+      <main>
         <div id="dashboard-container">
-        <div id="dashboard-jumbotron" class="jumbotron">   
+          <div id="dashboard-jumbotron" class="jumbotron">   
               <h1 className='large text-primary'>Dashboard</h1>
               <p className='lead'>
-           
                 <i className='fas fa-user' /> Welcome {user && user.name}  {user && user._id}
               </p>
-
               {user !== null ? (
                 <Fragment>
-  
                   <form onSubmit={submitHandler}>
                   <div class="row">
                       <TextField
-
-
+                          
+             
                         defaultValue={user && user.name}
                       value={name}
                       onChange={e => onChange(e)}
@@ -97,7 +93,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
                           className="col-sm-12 location-field"
                           name="name"
                           >
-
+                              
                       </TextField>
                   </div>
                   <div class="row">
@@ -105,7 +101,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
                           defaultValue={user.email}
                           value={email}
                           onChange={e => onChange(e)}
-
+                        
                           placeholder="email"
                           id="outlined-name"
                           margin="normal"
@@ -131,11 +127,9 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
 
                   </form>
 
-
-
-
                 </Fragment>
               ) : (
+
                 <Fragment>
 
                   <p>You have not yet setup an account, please register</p>
@@ -143,11 +137,13 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
                     Create Profile
                   </Link>
                 </Fragment>
-           
+              )}
+          </div>
+        </div>
+      </main>
+    </Fragment>
   );
-           
 };
-
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
