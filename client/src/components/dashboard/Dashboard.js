@@ -36,7 +36,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
     event.preventDefault();
         
     const updateAccount = async data => {
-        const user = {
+        const account = {
             name: data.name,
             email: data.email
         }
@@ -47,8 +47,8 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
               'Content-Type': 'application/json'
             }
         };
-        const body = JSON.stringify(user);
-        const res = await axios.post(`/api/users/${user && user.id}`, body, config);
+        const body = JSON.stringify(account);
+        const res = await axios.put(`/api/users/update/${user && user._id}`, body, config);
         console.log(res.data)
         console.log("account updated")
         console.log(user && user.id)
