@@ -51,11 +51,11 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
         const body = JSON.stringify(updatedAccount);
         const res = await axios.post(`/api/users/update/${user && user._id}`, body, config);
         console.log(res.data)
-        console.log("account updated")
+
      
        } catch(err) {
         console.log(err.response.data)
-        console.log("account not updated")
+
        }
 
     }
@@ -68,21 +68,25 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
 
 
   return  (
+  
     <Fragment>
-      <main>
+   
         <div id="dashboard-container">
-          <div id="dashboard-jumbotron" class="jumbotron">   
+        <div id="dashboard-jumbotron" class="jumbotron">   
               <h1 className='large text-primary'>Dashboard</h1>
               <p className='lead'>
+           
                 <i className='fas fa-user' /> Welcome {user && user.name}  {user && user._id}
               </p>
+
               {user !== null ? (
                 <Fragment>
+  
                   <form onSubmit={submitHandler}>
                   <div class="row">
                       <TextField
-                          
-             
+
+
                         defaultValue={user && user.name}
                       value={name}
                       onChange={e => onChange(e)}
@@ -93,7 +97,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
                           className="col-sm-12 location-field"
                           name="name"
                           >
-                              
+
                       </TextField>
                   </div>
                   <div class="row">
@@ -101,7 +105,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
                           defaultValue={user.email}
                           value={email}
                           onChange={e => onChange(e)}
-                        
+
                           placeholder="email"
                           id="outlined-name"
                           margin="normal"
@@ -127,18 +131,23 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
 
                   </form>
 
+
+
+
                 </Fragment>
               ) : (
                 <Fragment>
-                         <Redirect to='./../login' />
+
+                  <p>You have not yet setup an account, please register</p>
+                  <Link to='/register' className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1'>
+                    Create Profile
+                  </Link>
                 </Fragment>
-              )}
-          </div>
-        </div>
-      </main>
-    </Fragment>
+           
   );
+           
 };
+
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
