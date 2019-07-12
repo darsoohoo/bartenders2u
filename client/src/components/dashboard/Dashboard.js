@@ -31,7 +31,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
     this.setState({ [input]: e.target.value });
   };
   */
-
+/*
   const submitHandler = event => {
     event.preventDefault();
         
@@ -64,7 +64,24 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
    
  
 };
+*/
 
+// Remove like
+export const updateUser = id => async dispatch => {
+  try {
+    const res = await axios.put(`/api/users/update/${id}`);
+
+    dispatch({
+      type: UPDATE_LIKES,
+      payload: { id, likes: res.data }
+    });
+  } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
 
 
   return loading && profile === null ? (
@@ -80,7 +97,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
               </p>
               {user !== null ? (
                 <Fragment>
-                  <form onSubmit={submitHandler}>
+                  <form onSubmit={updateUser}>
                   <div class="row">
                       <TextField
                           

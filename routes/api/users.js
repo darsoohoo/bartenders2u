@@ -83,7 +83,7 @@ router.post(
 
 
 // Update Task
-router.post('/:id', function(req, res, next) {
+router.post('/update/:id', function(req, res, next) {
     console.log("got the router id")
     User.findById(req.params.id)
     .then(user => user)
