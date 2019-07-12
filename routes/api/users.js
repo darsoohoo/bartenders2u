@@ -82,12 +82,21 @@ router.post(
 );
 
 
-// Update Task
-router.post('/update/:id', function(req, res, next) {
+// Update Account
+router.put('/update/:id', (req, res, next) => {
     console.log("got the router id")
-    User.findById(req.params.id)
-    .then(user => user)
    
+    User.findOne({_id: req.params.id})
+    .exec()
+    .then((user) => {
+      name = req.body.name;
+      email = req.body.email;
+      user.save()
+      console.log("new account info saved")
+      .then(() => res.json(user))
+      .catch((err) => next(err));
+    })
+    
 
 })
 

@@ -33,7 +33,7 @@ const Navbar = ({
         <div className="collapse navbar-collapse" id="myNavbar">
         <ul className="nav navbar-nav navbar-right">
             <li className="dropdown">
-            <a className="dropdown-toggle" data-toggle="dropdown" href="#">Profile
+            <a className="dropdown-toggle" data-toggle="dropdown" href="#">{user.name}
             <span className="caret"></span></a>
             <ul className="dropdown-menu">
                 <li><Link to="/dashboard">Account</Link></li>
