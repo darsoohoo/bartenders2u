@@ -55,7 +55,6 @@ class QuoteReview extends Component {
                 phoneNumber: data.phoneNumber
             }
 
-
            try {
             const config = {
                 headers: {
@@ -70,7 +69,6 @@ class QuoteReview extends Component {
            }
 
         }
-
 
         addQuote(values);
         this.continue(event)

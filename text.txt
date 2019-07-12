@@ -84,11 +84,40 @@ router.post(
 
 // Update Task
 router.post('/:id', function(req, res, next) {
-    console.log("got the router id")
-    User.findById(req.params.id)
-    .then(user => user)
-   
+  var user = req.body
+  var updUser = {}
+  console.log("you are at the user route")
 
+  if (user.email) {
+    updUser.email = user.email
+    console.log(user.email)
+  }
+
+  if (user.name) {
+    updUser.name = user.name
+  }
+
+  if (!updUser) {
+    res.status(400)
+    res.json({
+      error: 'Bad Data'
+    })
+    console.log("bad data")
+  } else {
+    const user = User.findById(
+       req.params.id ,
+      updUser,
+      {},
+      function(err, user) {
+        if (err) {
+          res.send(err)
+        }
+        console.log(err)
+        res.json(user)
+        console.log("user " + user)
+      }
+    )
+  }
 })
 
 module.exports = router;
