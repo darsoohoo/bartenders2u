@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
@@ -129,8 +129,13 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
 
                 </Fragment>
               ) : (
+
                 <Fragment>
-                         <Redirect to='./../login' />
+
+                  <p>You have not yet setup an account, please register</p>
+                  <Link to='/register' className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1'>
+                    Create Profile
+                  </Link>
                 </Fragment>
               )}
           </div>
