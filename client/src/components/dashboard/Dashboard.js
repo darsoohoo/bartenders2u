@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
@@ -7,6 +7,7 @@ import Loader from '../Loader';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import axios from 'axios';
 import './Dashboard.css';
+
 
 const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: { profile, loading }}) => {
   useEffect(() => {
@@ -36,7 +37,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
     event.preventDefault();
         
     const updateAccount = async data => {
-        const account = {
+        const updatedAccount = {
             name: data.name,
             email: data.email
         }
@@ -47,15 +48,14 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
               'Content-Type': 'application/json'
             }
         };
-        const body = JSON.stringify(account);
-        const res = await axios.put(`/api/users/update/${user && user._id}`, body, config);
+        const body = JSON.stringify(updatedAccount);
+        const res = await axios.post(`/api/users/update/${user && user._id}`, body, config);
         console.log(res.data)
         console.log("account updated")
-        console.log(user && user.id)
+     
        } catch(err) {
         console.log(err.response.data)
         console.log("account not updated")
-        console.log(user && user.id)
        }
 
     }
@@ -66,27 +66,8 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
 };
 
 
-/*
-export const updateUser = id => async dispatch => {
-  try {
-    const res = await axios.put(`/api/users/update/${id}`);
 
-    dispatch({
-      type: UPDATE_LIKES,
-      payload: { id, likes: res.data }
-    });
-  } catch (err) {
-    dispatch({
-      type: POST_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status }
-    });
-  }
-};
-*/
-
-  return loading && profile === null ? (
-    <Loader />
-  ) : (
+  return  (
     <Fragment>
       <main>
         <div id="dashboard-container">
@@ -146,16 +127,10 @@ export const updateUser = id => async dispatch => {
 
                   </form>
 
-         
-
-
                 </Fragment>
               ) : (
                 <Fragment>
-                  <p>You have not yet setup an account, please register</p>
-                  <Link to='/register' className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1'>
-                    Create Profile
-                  </Link>
+                         <Redirect to='./../login' />
                 </Fragment>
               )}
           </div>
