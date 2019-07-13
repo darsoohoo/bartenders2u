@@ -34,10 +34,10 @@ class Company extends Component {
                 <div id="company-jumbotron" class="jumbotron">    
 
                 <h2>Mission Statement</h2>
-                    <p>Mission Statement
+                    <p>
 Bartenders 2U is a mobile bartending company bartending ultra exclusive events. Providing world class craft cocktails and elegant bars to each client further enriching their experience nationwide.</p>
-                <h2>Contact Info</h2>
-                Bartenders 2 U
+                <h3>Contact Info</h3>
+                Bartenders2U
 E:Chris@Bartenders2U.com
 T:209-534-3602
               

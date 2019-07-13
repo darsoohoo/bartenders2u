@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import Loader from '../Loader';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import axios from 'axios';
-import './Dashboard.css';
+import './EditDashboard.css';
 
 
 const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: { profile, loading }}) => {
@@ -19,28 +19,25 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
     email: ''
   });
 
-
   const { name, email } = formData;
 
-  const [ readOnly, setReadOnly ] = useState({
-    readOnly: true
-  })
+let selectedFile = null
+const fileSelectHandler = event => {
+  selectedFile = event.target.files[0]
+  console.log(event.target.files[0])
+}
 
- 
-  
   const onChange = e =>
   setFormData({ ...formData, [e.target.name]: e.target.value });
 
-
   const submitHandler = event => {
     event.preventDefault();
-        
     const updateAccount = async data => {
         const updatedAccount = {
             name: data.name,
-            email: data.email
+            email: data.email,
+            avatar: selectedFile.name
         }
-
        try {
         const config = {
             headers: {
@@ -51,17 +48,12 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
         const res = await axios.post(`/api/users/update/${user && user._id}`, body, config);
         console.log(res.data)
         console.log("account updated")
-     
        } catch(err) {
         console.log(err.response.data)
         console.log("account not updated")
        }
-
     }
-
     updateAccount(formData);
-   
- 
 };
 
 
@@ -71,24 +63,49 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
       <main>
         <div id="dashboard-container">
           <div id="dashboard-jumbotron" class="jumbotron">   
-              <h1 className='large text-primary'>Dashboard</h1>
-              <p className=' lead'>
-                <i className='fas fa-user' /> Welcome {user && user.name}
+              <h1 className='row large text-primary'>Edit</h1>
+              <p className='row lead'>
+                <i className='fas fa-user' /> 
               </p>
-              <img src={user.avatar}/>
               {user !== null ? (
                 <Fragment>
                   <form onSubmit={submitHandler}>
-                          <div class="">
-                              <label>{user && user.name}</label>
+                          <div class="row">
+                              <TextField
+                                value={user.name}
+                                onChange={e => onChange(e)}
+                                  id="outlined-name"
+                                  margin="normal"
+                                  variant="outlined"
+                                  label="name"
+                                  className="col-sm-12 location-field"
+                                  name="name"
+                                  id="fieldname"
+                                  >
+                              </TextField>
                           </div>
-                      
-                          <div class="">
-                              <label>{user && user.email}</label>
-                          </div>
+                          <div class="row">
+                              <TextField
+                                  value={user.email}
+                                  onChange={e => onChange(e)}
+                                  placeholder="email"
+                                  id="outlined-name"
+                                  margin="normal"
+                                  variant="outlined"
+                                  label="email"
+                                  className="col-sm-12 location-field"
+                                  name="email"
+                                  id="fieldemail"
+                                  >
+                              </TextField>
+                              <input type="file" onChange={fileSelectHandler}/>
+
                             <div className="">
-                            <Link to="/edit-dashboard" className='row mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1' >
-                     Edit Profile
+                            <button type="submit" className='row mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1' >
+                              <i className='fas fa-user-minus' /> Update
+                            </button>
+                            <Link to="/dashboard" className='row mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1' >
+                              Cancel
                             </Link>
 
                             <div className='my-2'>
@@ -97,16 +114,12 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
                             </button>
                             </div>
                         </div>
-
-                
-
+                    </div>
                   </form>
 
                 </Fragment>
               ) : (
-
                 <Fragment>
-
                   <p>You haven't setup an account yet, please register</p>
                   <Link to='/register' className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1'>
                     Create Profile
