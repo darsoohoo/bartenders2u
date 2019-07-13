@@ -5,7 +5,6 @@ import Loader from './Loader'
 import './Packages.css'
 
 
-
 class Packages extends Component {
     constructor(props) {
         super(props);
