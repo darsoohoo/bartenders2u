@@ -27,3 +27,17 @@
     padding-bottom: 15px!important;
 }
 
+.select-package{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.price {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.level-header{
+    margin-top: 20px;
+}

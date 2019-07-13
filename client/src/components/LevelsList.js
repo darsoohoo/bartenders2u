@@ -22,7 +22,7 @@ const LevelsList = props => {
                         ))}
                     </div>
 
-                    <Link type="submit" id="when-next" to="/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    <Link type="submit" id="when-next" to="/" className="select-package mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                             Select
                     </Link> 
 
