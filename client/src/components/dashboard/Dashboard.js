@@ -75,7 +75,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
               <p className=' lead'>
                 <i className='fas fa-user' /> Welcome {user && user.name}
               </p>
-              <img src={user.avatar}/>
+              <img src={user && user.avatar}/>
               {user !== null ? (
                 <Fragment>
                   <form onSubmit={submitHandler}>
@@ -88,7 +88,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
                           </div>
                             <div className="">
                             <Link to="/edit-dashboard" className='row mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1' >
-                     Edit Profile
+                            Edit Profile
                             </Link>
 
                             <div className='my-2'>
