@@ -33,10 +33,10 @@ const fileSelectHandler = event => {
   const submitHandler = event => {
     event.preventDefault();
     const updateAccount = async data => {
+
         const updatedAccount = {
-            name: data.name,
-            email: data.email,
-            avatar: selectedFile.name
+            name: data.name == '' ? (user && user.name) : data.name,
+            email: data.email == '' ? (user && user.email) : data.email
         }
        try {
         const config = {
@@ -54,6 +54,7 @@ const fileSelectHandler = event => {
        }
     }
     updateAccount(formData);
+    window.location.replace("/dashboard");
 };
 
 
@@ -72,12 +73,13 @@ const fileSelectHandler = event => {
                   <form onSubmit={submitHandler}>
                           <div class="row">
                               <TextField
-                                value={user.name}
+                              
+                                value={name}
                                 onChange={e => onChange(e)}
                                   id="outlined-name"
                                   margin="normal"
                                   variant="outlined"
-                                  label="name"
+                                  label="New name"
                                   className="col-sm-12 location-field"
                                   name="name"
                                   id="fieldname"
@@ -86,13 +88,14 @@ const fileSelectHandler = event => {
                           </div>
                           <div class="row">
                               <TextField
-                                  value={user.email}
+                            
+                                  value={email}
                                   onChange={e => onChange(e)}
                                   placeholder="email"
                                   id="outlined-name"
                                   margin="normal"
                                   variant="outlined"
-                                  label="email"
+                                  label="New email"
                                   className="col-sm-12 location-field"
                                   name="email"
                                   id="fieldemail"
@@ -104,7 +107,7 @@ const fileSelectHandler = event => {
                             <button type="submit" className='row mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1' >
                               <i className='fas fa-user-minus' /> Update
                             </button>
-                            <Link to="/dashboard" className='row mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1' >
+                            <Link to="/dashboard" className='cancel-button row mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my-1' >
                               Cancel
                             </Link>
 
