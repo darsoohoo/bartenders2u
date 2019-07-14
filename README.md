@@ -1,15 +1,22 @@
 # Bartenders2U Bloc Capstone Project
-This is app is for my capstone project at Bloc.
+This is app was built is for my capstone project at Bloc. The idea stemmed from a friend's company. 
 
-### `npm run dev`
+The production version of this is on Heroku at [I'm an inline-style link](https://bartenders2u.herokuapp.com)
 
-Use this command to run the Express server on Local 5000 and the React app on 3000.
+The actual website with the company is at [I'm an inline-style link](https://www.bartenders2u.com). Go check em out.
+
+Scroll to the **End-user Flow** section of this README for a description of the various use-cases.
+
 
 ### `npm install`
 
 Use this command to install dependencies before running the app.
 
 Install dependencies at the root directory and in the client directory.
+
+### `npm run dev`
+
+Use this command to run the Express server on Local 5000 and the React app on 3000.
 
 
 ## Available Scripts
@@ -18,7 +25,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app<br>
+Runs the Express app<br>
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 
@@ -70,7 +77,7 @@ Our Company
 4. Register
 
     4.1 Click on the "Signup" link on the right side of the navbar
-    4.2 Enter your name, email, password, and password again to confirm
+    4.2 Enter a name, an email, a password, and the password again to confirm
     4.3 Click the register button
     Note: if you have a Gravatar.com account and your email matches your Gravatar email, it will use your profile picture from Gravatar
 
