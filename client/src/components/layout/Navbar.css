@@ -5,8 +5,11 @@
   border: 0;
   font-size: 11px !important;
   letter-spacing: 4px;
-  opacity: 0.99;
+  
 }
+
+
+
 .navbar li a, .navbar .navbar-brand { 
   color: #d5d5d5 !important;
 }
@@ -33,17 +36,23 @@
 
 
 .nav-avatar{
-  height: 35px;
+  height: 32px;
   width: 35px;
   border-radius: 15%;
   margin-top: 6px;
   margin-bottom: 5px;
+  margin-right: 10px;
+  
 }
 
 .rightside-nav{
-  margin-right: 25px;
+  margin-right: 30px;
 }
 
 .leftside-nav{
-  margin-left: 80px!important;
+  margin-left: 70px!important;
+}
+
+.left-nav-items{
+  margin-left: 50px!important;
 }

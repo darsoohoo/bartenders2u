@@ -24,17 +24,21 @@ const Navbar = ({
     window.location.reload();
   }
 
+
+
   return  user !== null ? (
     <nav className="navbar navbar-default navbar-fixed-top">
     <div className="leftside-nav container-fluid">
         <div className=" navbar-header">
         <Link className="navbar-brand" to='/'>B2U</Link>
         </div>
+        <div className="left-nav-items">
         <div>
         <ul className="nav navbar-nav navbar-left">
             <li><Link to='/packages'>Our Services</Link></li>
             <li><Link to='/company'>Our Company</Link></li>
         </ul>
+        </div>
         </div>
         <div className="collapse navbar-collapse" id="myNavbar">
         <ul className="rightside-nav nav navbar-nav navbar-right">
@@ -66,17 +70,19 @@ const Navbar = ({
 
                             <Link className="navbar-brand" to='/'>B2U</Link>
                             </div>
-                            <div>
-                            <ul className="nav navbar-nav navbar-left">
-                                <li><Link to='/packages'>Our Services</Link></li>
-                                <li><Link to='/company'>Our Company</Link></li>
-                            </ul>
-                            </div>
-                            <div className="collapse navbar-collapse" id="myNavbar">
-                            <ul className="rightside-nav nav navbar-nav navbar-right">
-                                <li><Link to='/login'>Login</Link></li>
-                                <li><Link to='/register'>Signup</Link></li>
-                            </ul>
+                            <div className="left-nav-items">
+                              <div className="">
+                              <ul className="nav navbar-nav navbar-left">
+                                  <li><Link to='/packages'>Our Services</Link></li>
+                                  <li><Link to='/company'>Our Company</Link></li>
+                              </ul>
+                              </div>
+                              <div className="collapse navbar-collapse" id="myNavbar">
+                              <ul className="rightside-nav nav navbar-nav navbar-right">
+                                  <li><Link to='/login'>Login</Link></li>
+                                  <li><Link to='/register'>Signup</Link></li>
+                              </ul>
+                              </div>
                             </div>
                         
                         </div>
