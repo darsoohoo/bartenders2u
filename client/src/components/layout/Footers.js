@@ -9,9 +9,9 @@ import Link from '@material-ui/core/Link';
 function MadeWithLove() {
   return (
     <Typography variant="body2" color="textSecondary">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
+      T:209-534-3602
+      <Link color="inherit" href="#/">
+      209-534-3602
       </Link>
       {' team.'}
     </Typography>
@@ -47,14 +47,13 @@ export default function StickyFooter() {
           Bartenders2U
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
-          {'We offer cash and hosrted bar services for special events and price parties of any size.'}
-          {'The footer will move as the main element of the page grows.'}
+          {'We offer cash and hosted bar services for special events and price parties of any size.'}
         </Typography>
         <Typography variant="body1">Sticky footer placeholder.</Typography>
       </Container>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body1">My sticky footer can be found here.</Typography>
+          <Typography variant="body1">E:Chris@Bartenders2U.com</Typography>
           <MadeWithLove />
         </Container>
       </footer>
