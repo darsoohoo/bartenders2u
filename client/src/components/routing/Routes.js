@@ -4,7 +4,7 @@ import Register from '../auth/Register';
 import Login from '../auth/Login';
 import Alert from '../layout/Alert';
 import Dashboard from '../dashboard/Dashboard';
-import EditDashboard from '../dashboard/EditDashboard';
+import EditDashboard from '../dashboard/EditDashboard1';
 import CreateProfile from '../profile-forms/CreateProfile';
 import EditProfile from '../profile-forms/EditProfile';
 import AddExperience from '../profile-forms/AddExperience';
