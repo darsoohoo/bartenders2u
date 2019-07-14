@@ -49,7 +49,7 @@ export default function StickyFooter() {
         <Typography variant="h5" component="h2" gutterBottom>
           {'We offer cash and hosted bar services for special events and price parties of any size.'}
         </Typography>
-        <Typography variant="body1">Sticky footer placeholder.</Typography>
+        <Typography variant="body1">Serving Sacramento & The Bay Area.</Typography>
       </Container>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
