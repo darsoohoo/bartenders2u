@@ -39,11 +39,14 @@ Our Services
 Our Company
 ![alt text](/client/src/components/images/prod-ourcompany.png "Our Company")
 
+**Forms**
+![alt text](/client/src/components/images/multistep-form.gif "Request for Bartender Form")
+
 
 
 **End-User Flows**
 
-1. Submit Request for Bartender
+1. Submit Request for Bartender Form
 
     1.1 From the home page, enter in the date, start time and end time of event then hit next
    
@@ -69,6 +72,7 @@ Our Company
     4.1 Click on the "Signup" link on the right side of the navbar
     4.2 Enter your name, email, password, and password again to confirm
     4.3 Click the register button
+    Note: if you have a Gravatar.com account and your email matches your Gravatar email, it will use your profile picture from Gravatar
 
 5. Log In
 
@@ -89,5 +93,6 @@ Our Company
     7.1 While logged in, click on your name on the right side of the navbar
     7.2 Select the "Account" option on the dropdown menu
     7.3 Click the red "Delete My Account" button
-    7.4 
+    7.4 Click okay at the alert box(s)
+
 
