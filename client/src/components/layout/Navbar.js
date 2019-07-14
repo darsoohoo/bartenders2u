@@ -67,7 +67,7 @@ const Navbar = ({
                             <Link className="navbar-brand" to='/'>B2U</Link>
                             </div>
                             <div>
-                            <ul className="leftside-nav nav navbar-nav navbar-left">
+                            <ul className="nav navbar-nav navbar-left">
                                 <li><Link to='/packages'>Our Services</Link></li>
                                 <li><Link to='/company'>Our Company</Link></li>
                             </ul>

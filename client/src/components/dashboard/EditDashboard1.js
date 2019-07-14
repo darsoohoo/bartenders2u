@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import Loader from '../Loader';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import axios from 'axios';
-import './EditDashboard.css';
+import './EditDashboard.1.css';
 
 
 const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: { profile, loading }}) => {

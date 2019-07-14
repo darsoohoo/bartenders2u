@@ -60,10 +60,10 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
     }
 
     updateAccount(formData);
-   
- 
+  
 };
 
+const username = (user && username)
 
 
   return  (

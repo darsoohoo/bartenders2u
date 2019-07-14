@@ -36,7 +36,7 @@
   height: 35px;
   width: 35px;
   border-radius: 15%;
-  margin-top: 5px;
+  margin-top: 6px;
   margin-bottom: 5px;
 }
 
@@ -45,5 +45,5 @@
 }
 
 .leftside-nav{
-  margin-left: 95px!important;
+  margin-left: 80px!important;
 }
