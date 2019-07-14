@@ -30,3 +30,20 @@
 .dropdown-menu li a:hover {
   background-color: red !important;
 }
+
+
+.nav-avatar{
+  height: 35px;
+  width: 35px;
+  border-radius: 15%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.rightside-nav{
+  margin-right: 25px;
+}
+
+.leftside-nav{
+  margin-left: 95px!important;
+}
