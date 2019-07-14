@@ -63,8 +63,6 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
   
 };
 
-const username = (user && username)
-
 
   return  (
     <Fragment>
