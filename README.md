@@ -64,4 +64,30 @@ Our Company
 
     3.1 From the home page, click on the "Our Company" link on the left side of the header
 
+4. Register
+
+    4.1 Click on the "Signup" link on the right side of the navbar
+    4.2 Enter your name, email, password, and password again to confirm
+    4.3 Click the register button
+
+5. Log In
+
+    5.1 Click on the "Login" link on the right side of the navbar
+    5.2 Enter your email and password
+    5.3 Click the login button
+
+6. Edit Account
+
+    6.1 While loggged in, click on your name on the right side of the navbar
+    6.2 Select the "Account" option on the dropdown menu
+    6.3 Click the "Edit Profile" button
+    6.4 Enter in your new name, new email or both
+    6.5 Hit "Update" to save or "Cancel" to go back
+
+7. Delete Account
+
+    7.1 While logged in, click on your name on the right side of the navbar
+    7.2 Select the "Account" option on the dropdown menu
+    7.3 Click the red "Delete My Account" button
+    7.4 
 

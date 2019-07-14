@@ -35,8 +35,8 @@ const fileSelectHandler = event => {
     const updateAccount = async data => {
 
         const updatedAccount = {
-            name: data.name == '' ? (user && user.name) : data.name,
-            email: data.email == '' ? (user && user.email) : data.email
+            name: data.name === '' ? (user && user.name) : data.name,
+            email: data.email === '' ? (user && user.email) : data.email
         }
        try {
         const config = {
