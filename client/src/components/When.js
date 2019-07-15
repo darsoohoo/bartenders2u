@@ -37,7 +37,7 @@ export class When extends Component {
 
  
         return (
-                <section class="eventform">
+                <section class="request-form">
                     <form class="ui form">
                        <div>
                             <div class="form-row">

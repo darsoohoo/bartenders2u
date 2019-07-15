@@ -134,9 +134,9 @@ export class Landing extends Component {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat'}}>
-                <div class="container">
+                <div className="container">
                 <h4>We bring the party to you</h4>
-                    <div id="frontpage-jumbotron" class="jumbotron">    
+                    <div id="frontpage-jumbotron" className="jumbotron">    
                         <PackageSelection
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}

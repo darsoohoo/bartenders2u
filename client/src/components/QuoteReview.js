@@ -95,7 +95,7 @@ class QuoteReview extends Component {
 
             return (
                 <Fragment>
-                    <section className="quote-review-form">
+                    <section className="request-form">
                     <form className="ui form"  onSubmit={this.submitHandler} >
                             <div className="row">
                                <Link onClick={this.back}>Back</Link>   
