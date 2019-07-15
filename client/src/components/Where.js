@@ -30,7 +30,7 @@ class Where extends Component {
         }
 
         return (
-                <div class="eventform">
+                <div className="request-form">
                     <div class="row">
                         <Link className="back-link" onClick={this.back}>Back</Link> 
                     </div>
