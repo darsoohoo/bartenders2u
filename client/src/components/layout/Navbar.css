@@ -5,6 +5,7 @@
   border: 0;
   font-size: 11px !important;
   letter-spacing: 4px;
+
   
 }
 
@@ -12,6 +13,9 @@
 
 .navbar li a, .navbar .navbar-brand { 
   color: #d5d5d5 !important;
+  padding-bottom: 0px;
+  
+
 }
 .navbar-nav li a:hover {
   color: #fff !important;
@@ -24,36 +28,46 @@
   border-color: transparent;
 }
 .open .dropdown-toggle {
-  color: #fff;
+  color:white;
   background-color: #555 !important;
 }
 .dropdown-menu li a {
-  color: #000 !important;
+  color:grey !important;
 }
 .dropdown-menu li a:hover {
-  background-color: #29292c !important;
+  background-color: grey !important;
 }
 
 
 .nav-avatar{
-  height: 32px;
-  width: 35px;
+  height: 27px;
+  width: 27px;
   border-radius: 15%;
-  margin-top: 6px;
-  margin-bottom: 4px;
   margin-right: 7px;
   
 }
 
+
+
 .rightside-nav{
-  margin-right: 30px;
+  margin-right: 35px;
 }
 
 .leftside-nav{
   margin-left: 70px!important;
 }
 
-.left-nav-items{
-  margin-left: 50px!important;
+
+#our-services{
+  font-size: 16px;
 }
 
+#our-company{
+  font-size: 16px;
+}
+
+#signup{
+ background-color: grey; 
+ 
+ padding-bottom: 3px;
+}

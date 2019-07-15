@@ -27,66 +27,67 @@ const Navbar = ({
 
 
   return  user !== null ? (
-    <nav className="navbar navbar-default navbar-fixed-top">
-    <div className="leftside-nav container-fluid">
-        <div className=" navbar-header">
-        <Link className="navbar-brand" to='/'>B2U</Link>
-        </div>
-        <div className="left-nav-items">
-        <div>
-        <ul className="nav navbar-nav navbar-left">
-            <li><Link to='/packages'>Our Services</Link></li>
-            <li><Link to='/company'>Our Company</Link></li>
-        </ul>
-        </div>
-        </div>
-        <div className="collapse navbar-collapse" id="myNavbar">
-        <ul className="rightside-nav nav navbar-nav navbar-right">
-          <li><img className="nav-avatar" src={user.avatar}/></li>
-            <li className="dropdown">
-            <a className="dropdown-toggle" data-toggle="dropdown" href="#">
-            {
-              (user.name.charAt(0).toUpperCase() + user.name.slice(1) )
-              
-              }
-            <span className="caret"></span></a>
-            <ul className="dropdown-menu">
-                <li><Link to="/dashboard">Account</Link></li>
-                <li><Link onClick={Logout}>Signout</Link></li>
-            </ul>
-            </li>
-        </ul>
-        </div>
-     
-    </div>
-    </nav>
+          <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <div className="leftside-nav">
+                <Link className="navbar-brand" to='/'>B2U</Link>
+                <Link id="our-services" className="navbar-brand"  to='/packages'>Our Services</Link>
+                <Link id="our-company" className="navbar-brand"  to='/company'>Our Company</Link>
+              </div>
+            </div>
+            <div className="rightside-nav">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">            
+                    <img id="nav-avatar" className="nav-avatar" src={user.avatar}/>
+                    <span class="caret"></span></a>
+                    <ul className="dropdown-menu">
+                      <li><Link to="/dashboard">Account</Link></li>
+                      <li><Link onClick={Logout}>Signout</Link></li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+            </div>
+
+          </div>
+        </nav>
 
   ) : (
     <Fragment>
 
-        <nav className="navbar navbar-default navbar-fixed-top">
-                        <div className="container-fluid">
-                            <div className="leftside-nav navbar-header">
+            <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                  <div className="leftside-nav">
+                    <Link className="navbar-brand" to='/'>B2U</Link>
+                    <Link id="our-services" className="navbar-brand"  to='/packages'>Our Services</Link>
+                    <Link id="our-company" className="navbar-brand"  to='/company'>Our Company</Link>
+                  </div>
+                </div>
+                <div className="rightside-nav">
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><Link to='/login'>Login</Link></li>
+                      <li><Link id="signup" to='/register'>Signup</Link></li>
+                    </ul>
+                  </div>
+                </div>
 
-                            <Link className="navbar-brand" to='/'>B2U</Link>
-                            </div>
-                            <div className="left-nav-items">
-                              <div className="">
-                              <ul className="nav navbar-nav navbar-left">
-                                  <li><Link to='/packages'>Our Services</Link></li>
-                                  <li><Link to='/company'>Our Company</Link></li>
-                              </ul>
-                              </div>
-                              <div className="collapse navbar-collapse" id="myNavbar">
-                              <ul className="rightside-nav nav navbar-nav navbar-right">
-                                  <li><Link to='/login'>Login</Link></li>
-                                  <li><Link to='/register'>Signup</Link></li>
-                              </ul>
-                              </div>
-                            </div>
-                        
-                        </div>
-                        </nav>
+              </div>
+            </nav>
       
     </Fragment>
   );
