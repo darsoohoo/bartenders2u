@@ -21,7 +21,7 @@ import Company from '../Company';
 
 const Routes = () => {
   return (
-    <section className=''>
+    <section >
       <Alert />
       <Switch>
         <Route exact path="/packages" component={Packages} />
