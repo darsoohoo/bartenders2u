@@ -1,9 +1,9 @@
 # Bartenders2U Bloc Capstone Project
 This is app was built is for my capstone project at Bloc. The idea stemmed from a friend's company. 
 
-The production version of this is on Heroku at [I'm an inline-style link](https://bartenders2u.herokuapp.com)
+The production version of this is on Heroku at [https://bartenders2u.herokuapp.com](https://bartenders2u.herokuapp.com)
 
-The actual website with the company is at [I'm an inline-style link](https://www.bartenders2u.com). Go check em out.
+The actual website with the company is at [https://www.bartenders2u.com](https://www.bartenders2u.com).
 
 Scroll to the **End-user Flow** section of this README for a description of the various use-cases.
 
