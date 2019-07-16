@@ -81,8 +81,7 @@ class PackageSelection extends Component {
                                         <option value="201-500">200-500</option>
                                         <option value="500+">500+</option>
                                     </select>
-                             
- 
+
                                     <select defaultValue={values.eventType} onChange={handleChange('eventType')} className="event-size-type col-sm-6">
                                         <option value="">Type</option>
                                         <option value="Wedding">Wedding</option>
@@ -168,7 +167,7 @@ class PackageSelection extends Component {
         {
             
             return (
-                <section class="eventform">
+                <section class="request-form">
                 <form class="ui form" >
                     <div class="row">
                     <Link onClick={this.back}>Back</Link> 

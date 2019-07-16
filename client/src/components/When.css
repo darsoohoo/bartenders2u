@@ -1,21 +1,22 @@
 .time {
-    width: 135px;
+    width: 155px;
     padding-right:0px;
     padding-left: 2px;
-    padding-bottom: 10px;
-    padding-top: 5px!important;
-    margin-top:7px!important;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top:2px;
+    margin-right: 3px;
+    margin-left: 0px;
+    margin-bottom: 0px;
     height: 50px;
-    font-size: 14px;
+    font-size: 17px;
     border-radius: 1%;
     background: white;
  }
  
  .header-time {
-     margin-bottom:1px!important;
-     margin-top:25px!important;
+     margin-bottom:1px;
+     margin-top:25px;
      padding-left:0px;
      padding-bottom:0px;
  }
@@ -23,5 +24,14 @@
  .request-form{
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 50px;
+    padding-top: 0px!important;
+
+}
+
+.start-time {
+    float: left;
+}
+
+.end-time{
+    float: right;
 }
