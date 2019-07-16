@@ -46,28 +46,21 @@ export class When extends Component {
                                     <h5>Plan a unique experience</h5>
                                     <hr></hr>
                                     <h6>When</h6>
-                                        <form noValidate>
-                                            <TextField
-                                                id="date"
-                                                type="date"
-                                                value={values.date}
-                                                defaultValue={Date.now}
-                                                onChange={handleChange('date')}
-                                                InputLabelProps={{
-                                                shrink: true,
-                                                }}
-                                            />
-                                        </form>
+                                    <TextField
+                                        id="date"
+                                        type="date"
+                                        value={values.date}
+                                        defaultValue={Date.now}
+                                        onChange={handleChange('date')}
+                                        InputLabelProps={{
+                                        shrink: true,
+                                        }}
+                                    />
                                     </div>
-                                    
-                                    <div class="row">
-                                    <h6 className="col-sm-6 header-time">Start Time</h6>
-                                    <h6 className="col-sm-6 header-time">End Time</h6>
-
-                                    </div>
-
-                                    <div class="row">
-                                    <form  noValidate>
+                                    <div className="row">
+                                        <div>
+                                        <div className="start-time" >
+                                        <h6 className="header-time">Start Time</h6>
                                         <select type="time" defaultValue={values.startTime} onChange={handleChange('startTime')} className="time col-sm-6">
                                             <option value="12:00 AM">12:00 AM</option>
                                             <option value="1:00 AM">1:00 AM</option>
@@ -94,9 +87,10 @@ export class When extends Component {
                                             <option value="10:00 PM">10:00 PM</option>
                                             <option value="11:00 PM">11:00 PM</option>
                                         </select>
-                                    </form>
-                                    <form noValidate>
-                                        <select type="time" defaultValue={values.endTime} onChange={handleChange('endTime')} className="time col-sm-6">
+                                        </div>
+                                        <div className="end-time">
+                                        <h6 className="header-time">End Time</h6>
+                                        <select type="time" defaultValue={values.startTime} onChange={handleChange('startTime')} className="time col-sm-6">
                                             <option value="12:00 AM">12:00 AM</option>
                                             <option value="1:00 AM">1:00 AM</option>
                                             <option value="2:00 AM">2:00 AM</option>
@@ -119,23 +113,24 @@ export class When extends Component {
                                             <option value="7:00 PM">7:00 PM</option>
                                             <option value="8:00 PM">8:00 PM</option>
                                             <option value="9:00 PM">9:00 PM</option>
-                                            <option value="9:00 PM">10:00 PM</option>
-                                            <option value="9:00 PM">11:00 PM</option>
+                                            <option value="10:00 PM">10:00 PM</option>
+                                            <option value="11:00 PM">11:00 PM</option>
                                         </select>
-                                    </form>
-                                        <button
-                                            onClick={this.continue}
-                                            id="when-next" 
-                                            className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                                            Next
-                                        </button> 
-    
-                                    </div>
+                                        </div>
+                                        </div>
+                                    </div>   
                                 </div>
                             </div>
                        </div>
+                        <div className="row">
+                            <button
+                                onClick={this.continue}
+                                id="when-next" 
+                                className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                Next
+                            </button> 
+                        </div>
                     </form>
-
                 </section>
         );
     }

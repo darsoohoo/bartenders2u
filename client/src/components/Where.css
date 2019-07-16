@@ -1,6 +1,5 @@
 .location-field {
-    
-    padding-right:10px!important;
+    width: 100%;
     padding-bottom: 7px!important;
     padding-top: 0px!important;
     margin-top:0px!important;
@@ -14,22 +13,13 @@
      padding-bottom:0px!important;
  }
 
- .where-form{
+ .request-form{
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 
- button{
-     margin-bottom: 15px;
- }
-
-
-
-.eventform {
-    padding-left: 0px!important;
-}
 
 .back-link{
     padding-left: 0px!important;
