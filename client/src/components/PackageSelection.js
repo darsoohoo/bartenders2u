@@ -36,10 +36,12 @@ class PackageSelection extends Component {
         });
     }
 
+  
+
 
 
     render() {
-        const { values, handleChange } = this.props;
+        const { values, handleChange, handleChangePackage } = this.props;
         const { isLoaded, levels } = this.state;
         const progressBarStyle = {
             width: '55%',
@@ -179,10 +181,10 @@ class PackageSelection extends Component {
                  <div class="row">
                     <h5>Any package you want</h5>
                     <hr></hr>
-                    <select value={values.selectedPackage} onChange={handleChange('selectedPackage')} name="package" class="event-size-type" id="select-package">
+                    <select value={values.selectedPackage} onChange={handleChangePackage('selectedPackage')} name="package" class="event-size-type" id="select-package">
                   
                         {this.state.levels.map(level =>
-                            <option value={level.price} key={level.title}> {level.price} </option>)}
+                            <option value={level.title} key={level.title}> {level.title} </option>)}
                     </select>    
                     <Link to="/packages">Browse packages</Link>  
                 </div>   

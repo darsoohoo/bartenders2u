@@ -7,6 +7,7 @@ import './Landing.css'
 
 
 export class Landing extends Component {
+    
     state = {
         levels: [],
         step: 1,
@@ -55,10 +56,34 @@ export class Landing extends Component {
 
 
 
-  // Handle fields change
-  handleChange = input => e => {
-    this.setState({ [input]: e.target.value });
-  };
+    // Handle fields change
+    handleChange = input => e => {
+        this.setState({ [input]: e.target.value });
+        console.log(e.target.value)
+    };
+
+    // Handle Package Selection
+    
+    handleChangePackage = input => e => {
+        this.setState({ [input]: e.target.value });
+        let packageSelection = e.target.value
+        console.log(packageSelection)
+        if(packageSelection == "Bronze"){
+            this.setState({ packagedPrice: "299"})
+        } else if( packageSelection === "Silver"){
+            this.setState({packagePrice: "349"})
+        } else if ( packageSelection === "Gold"){
+            this.setState({ packagePrice: "899"})
+        } else if ( packageSelection === "Platinum"){
+            this.setState({packagePrice: "999"})
+        } else if ( packageSelection === "Diamond"){
+            this.setState({packagePrice: "3750"})
+        }
+        console.log(this.state.packagePrice)
+
+
+    };
+    
 
 
   submitHandler = (event) => {
@@ -66,8 +91,6 @@ export class Landing extends Component {
       const data = this.state
       console.log("Final data is " + data)
   }
-
-
 
 
 
@@ -141,6 +164,7 @@ export class Landing extends Component {
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
                             handleChange={this.handleChange}
+                            handleChangePackage={this.handleChangePackage}
                             values={values}
                         />
                     </div>
