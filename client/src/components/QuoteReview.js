@@ -19,7 +19,7 @@ class QuoteReview extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            levels: [],
+            levels: []
 
         };
 
@@ -30,12 +30,12 @@ class QuoteReview extends Component {
         fetch('api/levels/data')
         .then(res => res.json())
         .then(levels => this.setState({levels}, () => console.log('Levels fetched...', levels)))
-        
     }
 
+  
     submitHandler = event => {
         event.preventDefault();
-        const { values: { date, startTime, endTime, address, venueName, selectedPackage, packagePrice, eventSize, eventType, firstName, lastName, email, phoneNumber }, handleChange} = this.props;
+        const { values: { date, startTime, endTime, address, venueName, selectedPackage, packagePrice, eventSize, eventType, firstName, lastName, email, phoneNumber }} = this.props;
         const values = { date, startTime, endTime, address, venueName, selectedPackage, packagePrice, eventSize, eventType, firstName, lastName, email, phoneNumber }
         
         const addQuote = async data => {
@@ -52,7 +52,8 @@ class QuoteReview extends Component {
                 firstName: data.firstName,
                 lastName: data.lastName,
                 email: data.email,
-                phoneNumber: data.phoneNumber
+                phoneNumber: data.phoneNumber,
+                estimatedtotal: data.estimatedtotal
             }
 
            try {
@@ -91,6 +92,10 @@ class QuoteReview extends Component {
             height: '10px',
             marginTop: '15px'
         }
+
+        const salesTax = (parseFloat(packagePrice) * .085)
+        const estimatedtotal = (salesTax + parseFloat(packagePrice))
+
        
 
             return (
@@ -145,10 +150,10 @@ class QuoteReview extends Component {
     
                             <div className="row">
                                 <h5>Event Info</h5>           
-                                <select  onChange={handleChange('selectedPackage')} value={selectedPackage} name="selectedpackage" class="review-field col-sm-4" id="select-package">
+                                <select onChange={handleChange('selectedPackage')} value={selectedPackage} name="selectedpackage" class="review-field col-sm-4" id="select-package">
                                 
                                     {this.state.levels.map(level =>
-                                        <option  key={level.title}>{level.price} </option>)}
+                                        <option  key={level.title}>{level.title} </option>)}
                                 </select>
                                 <select onChange={handleChange('eventSize')} value={eventSize} name ="eventsize" class="col-sm-4 review-field">
                                     <option value="">Size</option>
@@ -187,7 +192,10 @@ class QuoteReview extends Component {
                             </div>
     
                         <div class="bottom-section">
-                            <p className="quote-item row"><h5>Estimated Subotal: </h5><input name="packageprice" class="no-border-inputs" value={`${selectedPackage}`}></input>  </p>
+                            <p className="quote-item row"><h5>Package </h5>$<input name="packageprice" class="no-border-inputs" value={packagePrice + ".00"}></input>  </p>
+                            <p className="quote-item row"><h5>Sales Tax %: </h5><input name="salestax" class="no-border-inputs" value="8.5%"></input>  </p>
+                            <p className="quote-item row"><h5>Sales Tax: </h5>$<input name="salestax" class="no-border-inputs" value={salesTax.toFixed(2)}></input>  </p>
+                            <p className="quote-item row"><h5>Estimated Subotal: </h5>$<input name="estimatedtotal" class="no-border-inputs" value={estimatedtotal.toFixed(2)}></input>  </p>
                             <h5 className="row">Would you like to submit your request to Bartenders2U?</h5>
                             <div className="row">
                                 <button  type="submit" id="submit-request" class="field mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">

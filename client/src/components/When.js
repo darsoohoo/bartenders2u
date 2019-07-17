@@ -90,7 +90,7 @@ export class When extends Component {
                                         </div>
                                         <div className="end-time">
                                         <h6 className="header-time">End Time</h6>
-                                        <select type="time" defaultValue={values.startTime} onChange={handleChange('startTime')} className="time col-sm-6">
+                                        <select type="time" defaultValue={values.endTime} onChange={handleChange('endTime')} className="time col-sm-6">
                                             <option value="12:00 AM">12:00 AM</option>
                                             <option value="1:00 AM">1:00 AM</option>
                                             <option value="2:00 AM">2:00 AM</option>

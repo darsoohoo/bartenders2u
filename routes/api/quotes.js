@@ -13,13 +13,14 @@ router.post('/submit-request', (req, res) => {
     venueName: req.body.venueName,
     address1: req.body.address,
     package: req.body.selectedPackage,
-    packagedPrice: req.body.selectedPackage,
+    packagePrice: req.body.packagePrice,
     eventSize: req.body.eventSize,
     eventType: req.body.eventType,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
     phone: req.body.phoneNumber,
+    estimatedTotal: req.body.estimatedTotal
 
   });
 
