@@ -15,13 +15,27 @@ class Packages extends Component {
         };
     }
 
+
     componentDidMount() {
+        this.getData();
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.intervalID);
+    }
+
+    getData = () => {
         fetch('/api/levels/data')
         .then(res => res.json())
-        .then(levels => this.setState({levels: levels, isLoaded: true}, () => console.log('Levels fetched...', levels)))
+        .then(levels => {
+          this.setState({ levels: [...levels], isLoaded: true });
+          // call getData() again in 5 seconds
+          this.intervalID = setTimeout(this.getData.bind(this), 5000);
+        })
         .catch(e => {
             console.log(`An error occured: ${e}`)
         });
+
     }
 
     render() {

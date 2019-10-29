@@ -37,8 +37,11 @@ const Navbar = ({
               </button>
               <div className="leftside-nav">
                 <Link className="navbar-brand" to='/'>B2U</Link>
-                <Link id="our-services" className="navbar-brand"  to='/packages'>Our Services</Link>
-                <Link id="our-company" className="navbar-brand"  to='/company'>Our Company</Link>
+                <div className="navbar-words">
+                  <Link id="our-services" className="navbar-brand"  to='/packages'>Our Services</Link>
+                  <Link id="our-company" className="navbar-brand"  to='/company'>Our Company</Link>
+                </div>
+
               </div>
             </div>
             <div className="rightside-nav">

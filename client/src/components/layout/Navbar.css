@@ -58,16 +58,18 @@
 }
 
 
+
 #our-services{
   font-size: 16px;
+  margin-left: 25px;
 }
 
 #our-company{
   font-size: 16px;
+  margin-left: 2px;
 }
 
 #signup{
  background-color: grey; 
- 
  padding-bottom: 3px;
 }
